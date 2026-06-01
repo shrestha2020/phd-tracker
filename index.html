@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhD Milestone Tracker</title>
+    <meta
+      name="description"
+      content="A clean tracking interface for CU Boulder Computer Science PhD milestones."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <main id="main-content" class="page-shell dashboard">
+      <section class="intro-card">
+        <h1>PhD Milestone Tracker</h1>
+        <p>
+          Track milestone timing, coursework requirements, forms, FAQs, and
+          advising touchpoints for the CU Boulder Computer Science PhD.
+        </p>
+      </section>
+
+      <nav class="tab-bar" role="tablist" aria-label="Tracker sections">
+        <button
+          class="tab-button tab-button--active"
+          type="button"
+          role="tab"
+          id="tab-plan"
+          data-tab="plan"
+          aria-selected="true"
+          aria-controls="planTab"
+        >
+          Milestone Tracker
+        </button>
+        <button
+          class="tab-button"
+          type="button"
+          role="tab"
+          id="tab-faq"
+          data-tab="faq"
+          aria-selected="false"
+          aria-controls="faqTab"
+        >
+          Tracker FAQs
+        </button>
+      </nav>
+
+      <div id="planTab" class="tab-panel tab-panel--active" role="tabpanel" aria-labelledby="tab-plan" tabindex="0">
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <h2>Degree Tracker</h2>
+            </div>
+          </div>
+
+          <div class="tracker-shell">
+            <div class="tracker-table-wrap">
+              <table class="tracker-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Milestone</th>
+                    <th scope="col">Input</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Requirement</th>
+                  </tr>
+                </thead>
+                <tbody id="trackerTableBody"></tbody>
+              </table>
+            </div>
+
+            <div id="trackerCards" class="tracker-cards" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-tabline">
+            <span class="line-tab line-tab--active">Recommended milestone completion timeline</span>
+          </div>
+
+          <label class="field field--inline">
+            <span>Entry Term</span>
+            <select id="entrySemester">
+              <option value="">Choose a term</option>
+            </select>
+          </label>
+
+          <div class="section-heading">
+            <div>
+              <h2>Recommended Milestone Completion Timeline</h2>
+            </div>
+          </div>
+
+          <p class="deadline-intro">
+            Select your entry term to see your recommended milestone completion timeline.
+          </p>
+
+          <div id="deadlineCards" class="deadline-grid">
+            <article class="deadline-placeholder">
+              <p>Select an entry semester to generate your roadmap.</p>
+            </article>
+          </div>
+
+          <article class="dropin-card">
+            <div>
+              <p class="dropin-card__kicker">Advisor Drop-ins</p>
+              <h3>Rajshree&apos;s Drop-ins</h3>
+              <div class="dropin-card__inline">
+                <div class="dropin-card__actions">
+                  <a
+                    class="dropin-card__link"
+                    href="mailto:Rajshree.Shrestha@colorado.edu"
+                    aria-label="Email Rajshree"
+                  >
+                    Email
+                  </a>
+                  <a
+                    class="dropin-card__link"
+                    href="https://outlook.office365.com/owa/calendar/CS_GradAdvisor@o365.colorado.edu/bookings/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Book Rajshree's drop-in (opens in new tab)"
+                  >
+                    Drop-in
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <p class="panel-note">
+            Format of the Area Exam and Proposal Defense depends on your advisor,
+            research area, and committee.
+          </p>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="section-heading__kicker">Forms &amp; Instructions</p>
+              <h2>Milestone Guide</h2>
+            </div>
+            <p>Open each milestone for the related paperwork, steps, and official links.</p>
+          </div>
+
+          <div id="guideCards" class="guide-grid" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <div id="faqTab" class="tab-panel" role="tabpanel" aria-labelledby="tab-faq" tabindex="0">
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <h2>Milestone FAQs</h2>
+            </div>
+            <p>Quick answers and official links for the policies behind this tracker.</p>
+          </div>
+
+          <div id="faqCards" class="resource-grid" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">
+        <p>
+          Tracking aid for the CU Boulder Computer Science PhD. Verify final
+          deadlines and submission requirements with the department and Graduate
+          School.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
