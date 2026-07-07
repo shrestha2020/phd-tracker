@@ -175,6 +175,7 @@ const milestoneGuide = [
       "Inform your staff academic advisor of your committee members at least two weeks before your exam.",
       "After you successfully complete the exam, fill out the Area Exam Report and route it through DocuSign to collect signatures.",
       "Email the completed form to your staff academic advisor.",
+      "Enroll in CSCI 6200 once you complete your Area Exam.",
     ],
     links: [
       {
