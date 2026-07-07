@@ -324,9 +324,9 @@ const milestones = [
   },
   {
     key: "nonCsCredits",
-    label: "Non-CS courses",
+    label: "Electives",
     requirement: "15 credits may be non-CS courses",
-    renderInput: () => renderNumber("nonCsCredits", null, "15 credits may be non-CS courses", "Number of non-CS credits"),
+    renderInput: () => renderNumber("nonCsCredits", null, "Add # of credits. 15 credits may be from non-CS classes.", "Number of elective credits"),
     status: () => countStatus(state.nonCsCredits, 15),
     complete: () => state.nonCsCredits >= 15,
   },
