@@ -309,7 +309,7 @@ const milestones = [
   },
   {
     key: "csDepthClass",
-    label: "CS Depth class",
+    label: "CS Depth course",
     requirement:
       "1 CSCI depth class required, 3 credits, course level 5XXX/6XXX/7XXX, not CSCI 5900, CSCI 7900, or CSCI 8990",
     renderInput: () =>
