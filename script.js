@@ -168,7 +168,7 @@ const milestoneGuide = [
     forms: [
       {
         label: "Area Exam Report",
-        url: "https://www.colorado.edu/cs/students/graduate-students/forms-policies",
+        url: "https://www.colorado.edu/cs/media/108",
       },
     ],
     instructions: [
@@ -178,8 +178,8 @@ const milestoneGuide = [
     ],
     links: [
       {
-        label: "Forms and policies",
-        url: "https://www.colorado.edu/cs/students/graduate-students/forms-policies",
+        label: "Area Exam Report",
+        url: "https://www.colorado.edu/cs/media/108",
       },
       {
         label: "Rajshree's drop-ins",
